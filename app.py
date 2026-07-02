@@ -17,15 +17,17 @@ option = st.selectbox(
 )
 if st.button("Generate"):
 if topic == "":
-    st.warning("Please enter a topic.")
+    st.warning("Please enter a topic")
 else:
 if option == "Explain Concept":
     prompt = f"Explain {topic} in simple language for a beginner."
-elif option == "Real-Life Example":
-    prompt = f"Give one simple real-life example of {topic}."
+elif option == "Real life Example":
+     prompt = f"Give one simple real-life example of {topic}."
 elif option == "Generate Quiz":
-    prompt = f"Create 5 MCQs on {topic} with answers."
+     prompt = f"Create 5 MCQs on {topic} with answers."
+
 else:
     prompt = topic
 response = model.generate_content(prompt)
 st.write(response.text)
+
