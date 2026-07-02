@@ -26,6 +26,6 @@ elif option == "Real-Life Example":
 elif option == "Generate Quiz":
     prompt = f"Create 5 MCQs on {topic} with answers."
 else:
-prompt = topic
+    prompt = topic
 response = model.generate_content(prompt)
 st.write(response.text)
